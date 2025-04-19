@@ -7,9 +7,10 @@ import { loggedInUserSelector } from 'src/app/features/auth/store/auth.selectors
 import * as AuthActions from 'src/app/features/auth/store/auth.actions';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.css'],
+    standalone: false
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   loggedInUser$ = this.store.select(loggedInUserSelector);
