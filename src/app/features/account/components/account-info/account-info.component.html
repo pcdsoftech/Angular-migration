@@ -1,0 +1,16 @@
+<div class="edit-account-info">
+    <p class="edit-account-info-title">Account</p>
+    <div class="edit-user">
+        <div class="edit-user-name-container" *ngFor="let userInfo of userInfoContainers">
+            <div class="label-and-value">
+                <p class="user-label">{{ userInfo.label }}</p>
+                <p class="user-label-value">{{ userInfo.value }}</p>
+            </div>
+            <div class="edit-button-container">
+                <img alt="" class="edit-icon"
+                    src="https://static.overlay-tech.com/assets/8f50f45c-4be1-4196-8697-bf5c906f92b6.svg" />
+                <span class="button">{{ userInfo.button }}</span>
+            </div>
+        </div>
+    </div>
+</div>

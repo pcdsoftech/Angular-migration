@@ -1,0 +1,49 @@
+.cover-container {
+  position: relative;
+  margin-left: 84px;
+  margin-right: 84px;
+  height: 350px;
+  border-radius: 12px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cover-change-button {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
+}
+
+.cover-change-button button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 4px;
+  border: none;
+  width: 180px;
+  height: 48px;
+  background: #8dd3bb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cover-change-button img {
+  width: 16px;
+  height: 16px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .cover-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 350px;
+  }
+  .cover-change-button button {
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+  }
+}

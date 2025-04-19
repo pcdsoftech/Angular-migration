@@ -1,0 +1,91 @@
+.payment-methods {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+.payments-card-container {
+  background-color: #fff;
+  display: flex;
+  gap: 24px;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 16px 0 rgba(17, 34, 17, 0.05);
+}
+.card-item-container {
+  background-color: #8dd3bb;
+  margin-right: 24px;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  cursor: pointer;
+}
+.card-content {
+  margin-bottom: 57px;
+  display: flex;
+}
+.card-number {
+  margin-right: 16px;
+  padding: 0 0 29px;
+  position: relative;
+  font-weight: 600;
+}
+.card-number-secret {
+  font-size: 24px;
+  position: relative;
+}
+.number-show {
+  font-size: 32px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.bin {
+  width: 24px;
+  height: 24px;
+}
+.exp-date {
+  display: flex;
+  align-items: center;
+}
+.valid {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.valid-thru {
+  font-size: 12px;
+}
+.valid-date {
+  font-size: 20px;
+  font-weight: 600;
+}
+.vector {
+  width: 51.77px;
+  height: 32.51px;
+}
+.add-new-card-container {
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+  border: 2px dashed #8dd3bb;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.add-a-new-card {
+  background-color: #fff;
+  border: none;
+  font-size: 12px;
+  opacity: 0.75;
+}
+@media only screen and (max-width: 1199.98px) {
+  .payments-card-container {
+    flex-direction: column;
+  }
+}

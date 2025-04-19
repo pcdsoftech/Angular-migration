@@ -1,0 +1,63 @@
+<div class="container" *ngIf="hotel">
+  <h1>{{ hotel.name }}</h1>
+  <div class="rating">
+    <div class="stars">
+      <i *ngFor="let star of [1, 2, 3, 4, 5]" class="bi bi-star-fill"></i>
+    </div>
+    <span class="review-count">{{ hotel.rating }} (1,234 reviews)</span>
+  </div>
+
+  <div class="image-gallery">
+    <img [src]="hotel.photos[currentImageIndex]" [alt]="'Hotel image ' + (currentImageIndex + 1)" class="main-image" />
+    <button class="nav-button prev" (click)="prevImage()">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+    <button class="nav-button next" (click)="nextImage()">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+    <div class="image-indicators">
+      <div *ngFor="let photo of hotel.photos; let i = index" class="indicator" [class.active]="i === currentImageIndex"></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="hotel-info">
+      <h2>About this hotel</h2>
+      <p>{{ hotel.overview }}</p>
+      <h3>Amenities</h3>
+      <div class="amenities-grid">
+        <div class="amenity" *ngFor="let amenity of categories">
+          <i class="bi bi-check-circle"></i>
+          <span>{{ amenity }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="booking-form">
+      <h3>Book Your Stay</h3>
+      <form [formGroup]="bookingForm" (ngSubmit)="bookRoom()">
+        <div class="form-group">
+          <label for="checkIn">Check-in</label>
+          <input id="checkIn" type="date" formControlName="checkIn" />
+        </div>
+        <div class="form-group">
+          <label for="checkOut">Check-out</label>
+          <input id="checkOut" type="date" formControlName="checkOut" />
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <select id="guests" formControlName="guests">
+            <option value="">Select number of guests</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+        </div>
+        <div class="form-footer">
+          <div class="price">{{ hotel.nightlyPrice | currency : 'USD' : 'symbol' : '1.0-0' }}<span>/night</span></div>
+          <button type="submit" [disabled]="!bookingForm.valid">Book Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

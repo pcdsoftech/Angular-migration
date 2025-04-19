@@ -1,0 +1,25 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# Visual Studio Code
+.vscode/
+
+# Miscellaneous
+.angular
+/coverage
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.cursorignore
+environments/

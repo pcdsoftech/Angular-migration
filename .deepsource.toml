@@ -1,0 +1,12 @@
+version = 1
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = ["angular"]
+  environment = [
+    "nodejs",
+    "mongo"
+  ]
+  skip_doc_coverage = ["class-expression", "method-definition"]

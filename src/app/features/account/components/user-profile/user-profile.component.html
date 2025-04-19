@@ -1,0 +1,40 @@
+<div class="user-profile-container">
+    <div class="user-info-container">
+        <div class="user-info">
+            <div class="user-image-and-name">
+                <div class="user-image-container">
+                    <span class="username-logo">{{ firstName | logo }}</span>
+                    <div class="pen">
+                        <img src="/assets/icons/pencil.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="user-name-and-email">
+                <p class="username">{{ firstName }} {{ lastName }}</p>
+                <p class="user-email">{{ userEmail }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="account-sections">
+        <section class="account-section-title" (click)="activeTab = 'account'">
+            Account
+        </section>
+        <hr />
+        <section class="account-section-title" (click)="activeTab = 'booking'">
+            Bookings
+        </section>
+        <hr />
+        <section class="account-section-title" (click)="activeTab = 'payment'">
+            Payment methods
+        </section>
+        <hr />
+    </div>
+
+    <app-account-info [loggedInUser]="loggedInUser" *ngIf="activeTab === 'account'"></app-account-info>
+
+    <app-bookings-info *ngIf="activeTab === 'booking'"></app-bookings-info>
+    <app-payment-info *ngIf="activeTab === 'payment'"></app-payment-info>
+    <div class="logout-button-container">
+        <button (click)="logout()">LOG OUT</button>
+    </div>
+</div>

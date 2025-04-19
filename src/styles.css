@@ -1,0 +1,23 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+ul {
+  list-style: none;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  body {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

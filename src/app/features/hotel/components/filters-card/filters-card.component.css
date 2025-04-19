@@ -1,0 +1,178 @@
+.filters-card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.show-places-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.show-places-container span {
+  font-weight: 700;
+  color: #4caf50;
+}
+
+.card-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  height: 300px;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-photo {
+  flex: 0 0 300px;
+  overflow: hidden;
+}
+
+.card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-container:hover .card-photo img {
+  transform: scale(1.05);
+}
+
+.card-items-container {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.card-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-price-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+.card-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-address img {
+  margin-right: 8px;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-rating-value {
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.card-rating-label {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.card-rating-label span {
+  font-weight: 700;
+  color: #333;
+  margin-left: 5px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card-button-icon {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 16px;
+}
+
+.card-button-icon:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.card-button-view {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button-view:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    height: auto;
+  }
+
+  .card-photo {
+    height: 200px;
+  }
+
+  .card-title-price-container {
+    flex-direction: column;
+  }
+
+  .card-price {
+    margin-top: 8px;
+  }
+}

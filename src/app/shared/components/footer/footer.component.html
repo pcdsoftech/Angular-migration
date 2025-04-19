@@ -1,0 +1,29 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="brand-social">
+      <h2 class="brand-title">Bookify</h2>
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <i class="bi bi-facebook social-icon"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="#" class="social-link">
+          <i class="bi bi-twitter social-icon"></i>
+        </a>
+        <a href="#" class="social-link">
+          <i class="bi bi-instagram social-icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="desktop-layout">
+      <app-footer-section *ngFor="let section of sections" [title]="section.title" [links]="section.links"> </app-footer-section>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="mobile-layout">
+      <app-collapsible-section *ngFor="let section of sections" [title]="section.title" [links]="section.links"> </app-collapsible-section>
+    </div>
+  </div>
+</footer>
