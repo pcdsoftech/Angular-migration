@@ -7,7 +7,7 @@ import { HotelDataModel } from '../../store/hotel.model';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  @Input() hotel!: HotelDataModel;
+  @Input() hotel!: HotelDataModel | null = null;
   @Output() bookNowClick = new EventEmitter<string>();
 
   hotelBackgroundPhoto?: string;
