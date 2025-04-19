@@ -16,8 +16,6 @@ import { AdventureAwaitsComponent } from './components/adventure-awaits/adventur
 
 @NgModule({
   declarations: [
-    CardComponent,
-    ContentComponent,
     FiltersCardComponent,
     HotelsFiltersComponent,
     SearchBarComponent,
@@ -25,6 +23,8 @@ import { AdventureAwaitsComponent } from './components/adventure-awaits/adventur
   ],
   imports: [
     CommonModule,
+    CardComponent,
+    ContentComponent,
     FormsModule,
     ReactiveFormsModule,
     EffectsModule.forFeature([HotelsEffects]),
