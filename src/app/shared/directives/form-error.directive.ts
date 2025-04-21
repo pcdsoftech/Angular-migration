@@ -2,7 +2,8 @@ import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 import { AbstractControl, FormGroup } from '@angular/forms';
 
 @Directive({
-  selector: '[appFormError]',
+    selector: '[appFormError]',
+    standalone: false
 })
 export class FormErrorDirective implements OnInit {
   @Input('appFormError') control!: AbstractControl | string;

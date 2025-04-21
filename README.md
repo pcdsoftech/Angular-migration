@@ -13,13 +13,13 @@ To install the client-side of this application, follow the steps below:
 1. Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/KaganCubukcu/Angular-booking.git
+git clone https://github.com/pcdsoftech/Angular-migration.git
 ```
 
 2. Navigate to the client directory using the following command:
 
 ```bash
-cd angular-booking
+cd Angular-migration
 ```
 
 3. Install the required dependencies using the following command:
